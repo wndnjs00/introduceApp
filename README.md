@@ -7,8 +7,9 @@
 
 
 #### 2.회원가입 화면
-<img src="https://github.com/wndnjs00/introduceApp/assets/89961868/8fbd25aa-ab3d-448b-bc75-9175a2055bbd" width="200" height="400"><br/>
--> 이름,아이디,비밀번호 모두 입력이 되어있어야 로그인화면으로 이동<br/><br/>
+<img src="https://github.com/wndnjs00/introduceApp/assets/89961868/8fbd25aa-ab3d-448b-bc75-9175a2055bbd" width="200" height="400">
+
+<br/>-> 이름,아이디,비밀번호 모두 입력이 되어있어야 로그인화면으로 이동<br/><br/>
 
 
 #### 3.자기소개 화면
