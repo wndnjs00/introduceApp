@@ -20,6 +20,12 @@ class SignInActivity : AppCompatActivity() {
 
 
         val name = intent.getStringExtra("name")   // name값 받아옴
+        val id2 = intent.getStringExtra("id2")
+        val password2 = intent.getStringExtra("password2")
+
+        id_et.setText(id2)
+        password_et.setText(password2)
+
 
 
         // 로그인 버튼 클릭시
@@ -40,7 +46,6 @@ class SignInActivity : AppCompatActivity() {
                 intent.putExtra("name",name) // 내가 입력한 name 넘겨줌
                 startActivity(intent)
                 Toast.makeText(this, "로그인 성공!", Toast.LENGTH_SHORT).show()
-
             }
 
 

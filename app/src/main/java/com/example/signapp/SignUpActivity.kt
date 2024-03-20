@@ -33,7 +33,6 @@ class SignUpActivity : AppCompatActivity() {
             val password = password.text.toString()
 
 
-
             // 이름,아이디,비밀번호값중 하나라도 비어있으면
             if(name.isEmpty() || id.isEmpty() || password.isEmpty()){
                 Toast.makeText(this, "입력되지 않은 정보가 있습니다", Toast.LENGTH_SHORT).show()
@@ -41,6 +40,9 @@ class SignUpActivity : AppCompatActivity() {
                 // 아니면 SignInActivity로 이동
                 val intent = Intent(this, SignInActivity::class.java)
                 intent.putExtra("name",name)    //name값 넘겨주기
+
+                intent.putExtra("id2", id)       //id값 넘겨주기
+                intent.putExtra("password2",password)    //password값 넘겨주기
                 startActivity(intent)
                 Toast.makeText(this, "회원가입 완료!", Toast.LENGTH_SHORT).show()
                 finish()    // 엑티비티 파괴
