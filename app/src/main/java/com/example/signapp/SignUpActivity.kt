@@ -6,9 +6,13 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import org.w3c.dom.Text
 
 class SignUpActivity : AppCompatActivity() {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
@@ -29,6 +33,7 @@ class SignUpActivity : AppCompatActivity() {
             val password = password.text.toString()
 
 
+
             // 이름,아이디,비밀번호값중 하나라도 비어있으면
             if(name.isEmpty() || id.isEmpty() || password.isEmpty()){
                 Toast.makeText(this, "입력되지 않은 정보가 있습니다", Toast.LENGTH_SHORT).show()
@@ -37,6 +42,7 @@ class SignUpActivity : AppCompatActivity() {
                 val intent = Intent(this, SignInActivity::class.java)
                 intent.putExtra("name",name)    //name값 넘겨주기
                 startActivity(intent)
+                Toast.makeText(this, "회원가입 완료!", Toast.LENGTH_SHORT).show()
                 finish()    // 엑티비티 파괴
             }
 
