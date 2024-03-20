@@ -28,22 +28,23 @@ class SignUpActivity : AppCompatActivity() {
         signBtn.setOnClickListener {
             
             // 사용자가 입력한 이름,아이디,비밀번호값 가져오기
-            val name = name.text.toString()
-            val id = id.text.toString()
-            val password = password.text.toString()
+            val name_get = name.text.toString()
+            val id_get = id.text.toString()
+            val password_get = password.text.toString()
 
 
             // 이름,아이디,비밀번호값중 하나라도 비어있으면
-            if(name.isEmpty() || id.isEmpty() || password.isEmpty()){
+            if(name_get.isEmpty() || id_get.isEmpty() || password_get.isEmpty()){
                 Toast.makeText(this, "입력되지 않은 정보가 있습니다", Toast.LENGTH_SHORT).show()
             }else{
                 // 아니면 SignInActivity로 이동
                 val intent = Intent(this, SignInActivity::class.java)
-                intent.putExtra("name",name)    //name값 넘겨주기
+                intent.putExtra("id", id_get)       //id값 넘겨주기
+                intent.putExtra("password",password_get)    //password값 넘겨주기
 
-                intent.putExtra("id2", id)       //id값 넘겨주기
-                intent.putExtra("password2",password)    //password값 넘겨주기
-                startActivity(intent)
+                // 새로운 activity에서 데이터보내기
+                setResult(RESULT_OK, intent)    // startActivity(intent) + 데이터전달
+
                 Toast.makeText(this, "회원가입 완료!", Toast.LENGTH_SHORT).show()
                 finish()    // 엑티비티 파괴
             }

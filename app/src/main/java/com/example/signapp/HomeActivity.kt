@@ -1,31 +1,37 @@
 package com.example.signapp
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import kotlin.random.Random
 
 class HomeActivity : AppCompatActivity() {
+
+    private lateinit var getSign : ActivityResultLauncher<Intent>
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        // SignInActivity에서 넘겨준 데이터 받아오기
-        val id = intent.getStringExtra("id")
-        val name = intent.getStringExtra("name")
+
 
         val myId = findViewById<TextView>(R.id.result_id2)
-        val myName = findViewById<TextView>(R.id.result_name2)
         val endBtn = findViewById<Button>(R.id.end_btn)
         val img = findViewById<ImageView>(R.id.imageView2)
 
 
-        // 받아온 데이터를 텍스트뷰에 표시 (텍스트뷰에 받아온 데이터 넣어줌)
-        myId.setText(id)
-        myName.setText(name)
+        // SignInActivity에서 넘겨준 데이터 받아오기
+        val id = intent.getStringExtra("id")
+
+        // 받아온 데이터를 텍스트뷰에 표시
+        myId.text = id
 
 
 
@@ -35,6 +41,7 @@ class HomeActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
 
 
         // 1부터 5까지 랜덤값 받아와서
