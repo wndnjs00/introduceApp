@@ -27,7 +27,7 @@
 
 
 
-#### 5.회원가입에서 입력한 아이디/비밀번호가 자동으로 로그인화면에 입력
-<img src="https://github.com/wndnjs00/introduceApp/assets/89961868/0ba80142-3579-400d-9bd9-c242412542c6" width="200" height="400">
+#### 5.회원가입에서 입력한 아이디/비밀번호가 자동으로 로그인화면에 반영
+<img src="https://github.com/wndnjs00/introduceApp/assets/89961868/32dbe7c2-bf2d-41e6-8894-637f26063b71" width="200" height="400">
 
 <br/>-> registerForActivityResult를 사용해서 회원가입에서 입력한 아이디/비밀번호가 회원가입버튼을 눌러 로그인화면으로 이동할 때 자동으로 입력되도록 구현<br/><br/>
