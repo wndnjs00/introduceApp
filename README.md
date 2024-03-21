@@ -21,7 +21,7 @@
 
 
 #### 4.이미지 5개 랜덤으로 보여주기
-<img src="https://github.com/wndnjs00/introduceApp/assets/89961868/5021519a-e64a-4f41-a4df-340b5ed881f" width="200" height="400">
+<img src="https://github.com/wndnjs00/introduceApp/assets/89961868/fa714754-1508-404a-bcea-1128074efe42" width="200" height="400">
 
 <br/>-> Random함수를 사용하여 자기소개 페이지가 시작될 때 5장 중 랜덤으로 1장의 사진이 표시되도록 구현<br/><br/>
 
